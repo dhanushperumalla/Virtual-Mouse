@@ -2,6 +2,7 @@ import cv2
 import mediapipe as mp
 import pyautogui
 cap = cv2.VideoCapture(0)
+cap.set(cv2.CAP_PROP_FPS, 60)  # Set the frame rate to 60 frames per second
 hand_detector = mp.solutions.hands.Hands()
 drawing_utils = mp.solutions.drawing_utils
 screen_width, screen_height = pyautogui.size()
